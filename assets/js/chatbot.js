@@ -6,7 +6,11 @@
       this.messagesContainer = element.find(".chat-messages");
       this.input = element.find(".chat-text");
       this.sendButton = element.find(".chat-send");
+      this.toggleButton = element.find(".chat-toggle");
+      this.chatContainer = element.find(".chat-container");
+      this.isOpen = false;
       this.bindEvents();
+      this.addWelcomeMessage();
     }
 
     bindEvents() {
@@ -14,6 +18,20 @@
       this.input.on("keypress", (e) => {
         if (e.which === 13) this.sendMessage();
       });
+      this.toggleButton.on("click", () => this.toggleChat());
+    }
+
+    toggleChat() {
+      this.isOpen = !this.isOpen;
+      this.chatContainer.toggle();
+      this.toggleButton.text(this.isOpen ? "✖" : "💬");
+      if (this.isOpen) {
+        this.input.focus();
+      }
+    }
+
+    addWelcomeMessage() {
+      this.addMessage("Bonjour ! Je suis votre assistant hôtelier. Comment puis-je vous aider aujourd'hui ?");
     }
 
     addMessage(message, isUser = false) {

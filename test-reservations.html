@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Chatbot Réservations - Hôtel Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            margin: 0 0 20px 0;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 20px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            color: #374151;
+            margin: 0 0 15px 0;
+            font-size: 20px;
+        }
+        
+        .feature-card p {
+            color: #6b7280;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .demo-info {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .demo-info h4 {
+            color: #92400e;
+            margin: 0 0 10px 0;
+        }
+        
+        .demo-info p {
+            color: #92400e;
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏨 Hôtel Demo</h1>
+            <p>Testez notre système de réservation par chatbot</p>
+        </div>
+        
+        <div class="content">
+            <h2 style="text-align: center; color: #374151; margin-bottom: 40px;">
+                Système de Réservation Intelligent
+            </h2>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Chat Intelligent</h3>
+                    <p>Notre chatbot vous guide dans votre réservation avec des réponses personnalisées et en temps réel.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Réservation Rapide</h3>
+                    <p>Réservez votre chambre en quelques clics. Vérifiez les disponibilités et confirmez instantanément.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏨</div>
+                    <h3>Chambres Variées</h3>
+                    <p>Choisissez parmi nos chambres doubles, suites familiales et chambres avec vue sur mer.</p>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <p style="color: #6b7280; margin-bottom: 20px; font-size: 18px;">
+                    Prêt à réserver votre séjour ? Cliquez sur le chatbot en bas à droite !
+                </p>
+                <a href="#" class="cta-button" onclick="alert('Utilisez le chatbot en bas à droite pour commencer votre réservation!')">
+                    🚀 Commencer ma réservation
+                </a>
+            </div>
+            
+            <div class="demo-info">
+                <h4>ℹ️ Information de démonstration</h4>
+                <p>
+                    <strong>Pour tester le système :</strong><br>
+                    1. Cliquez sur le chatbot flottant en bas à droite<br>
+                    2. Demandez des informations sur les chambres disponibles<br>
+                    3. Spécifiez vos dates de séjour<br>
+                    4. Suivez les instructions pour finaliser votre réservation<br><br>
+                    <strong>Exemples de questions :</strong><br>
+                    • "Avez-vous des chambres disponibles pour le week-end ?"<br>
+                    • "Quels sont vos tarifs pour une suite familiale ?"<br>
+                    • "Je souhaite réserver une chambre double pour 3 nuits"
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Intégration du chatbot WordPress -->
+    <script>
+        // Simuler l'intégration du shortcode WordPress [hotel_chatbot]
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ici, le shortcode [hotel_chatbot] serait normalement rendu par WordPress
+            console.log('Page de test prête - Le chatbot devrait apparaître via le shortcode WordPress [hotel_chatbot]');
+            
+            // Afficher un message d'instruction
+            setTimeout(function() {
+                if (!document.querySelector('[id*="chat-"]')) {
+                    const notice = document.createElement('div');
+                    notice.style.cssText = `
+                        position: fixed;
+                        bottom: 20px;
+                        right: 20px;
+                        background: #ef4444;
+                        color: white;
+                        padding: 15px 20px;
+                        border-radius: 10px;
+                        font-weight: 600;
+                        z-index: 10000;
+                        max-width: 300px;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                    `;
+                    notice.innerHTML = `
+                        <div style="margin-bottom: 10px;">⚠️ Chatbot non détecté</div>
+                        <div style="font-size: 12px; opacity: 0.9;">
+                            Pour tester le chatbot, utilisez le shortcode [hotel_chatbot] dans WordPress
+                        </div>
+                    `;
+                    document.body.appendChild(notice);
+                    
+                    // Masquer après 5 secondes
+                    setTimeout(() => notice.remove(), 5000);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
